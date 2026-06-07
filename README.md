@@ -1,33 +1,52 @@
-# LOGOS p5.js Prototype v0.8.1 Black Screen Fix
+# LOGOS v0.2 Animation & Asset Integration
 
-## Fix
+This build improves the previous integrated build by applying animation states and asset-driven visuals.
 
-v0.8 could open to a black screen because `sketch.js` was loaded as an ES module, but p5.js global-mode lifecycle functions were not attached to `window`.
+## Added
 
-This version fixes:
+- Player Word Core animation state machine
+  - idle
+  - cast
+  - channel
+  - hit
+  - death
 
-- `window.setup`
-- `window.draw`
-- `window.keyPressed`
-- Dynamic MediaPipe import inside `initCamera`
-- Game can render even if MediaPipe fails or camera permission is blocked
+- Enemy animation states
+  - Lost Page idle / attack / death
+  - Ink Wisp idle / attack / death
+  - Burning Manuscript idle / shot cast / beam cast / enrage / death
+
+- Spell visual differentiation
+  - Root-specific projectiles
+  - Beam rendering
+  - Wall rendering
+  - Seek overlay
+  - Split overlay
+  - Steam hidden spell cloud
+
+- Sentence compile animation
+- Enemy Sentence UI
+- Ambient scene animation
+  - floating pages
+  - candle flicker
+  - rune floor pulse
+  - particles
 
 ## Controls
 
 - SPACE = Start / Continue
 - Arrow Keys = Move
-- C = Toggle Camera Input
 - 1 = Ignis / FIRE
 - 2 = Aqua / WATER
 - 3 = Ventus / WIND
 - 4 = Terra / EARTH
-- 5 = Lux / LIGHT
-- 6 = Shot
-- 7 = Beam
-- 8 = Wall
-- 9 = Seek
+- 5 = Shot
+- 6 = Beam
+- 7 = Wall
+- 8 = Seek
+- 9 = Split
 - R = Retry
 
-## Camera
+## Hidden Spell
 
-Camera requires HTTPS or localhost.
+- 1 + 2 = Steam
