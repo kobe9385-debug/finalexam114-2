@@ -1,0 +1,12 @@
+{
+  "lost_page": {
+    "name": "Lost Page",
+    "hp": 60,
+    "sentence_pool": [
+      [
+        "IGNIS",
+        "SHOT"
+      ]
+    ]
+  }
+}

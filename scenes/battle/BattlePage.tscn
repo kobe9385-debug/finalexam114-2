@@ -1,0 +1,50 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="Script" path="res://scripts/battle/BattlePage.gd" id="1"]
+[ext_resource type="Script" path="res://scripts/core/GameManager.gd" id="2"]
+[ext_resource type="Texture2D" path="res://assets/environment/lost_library/lost_library_bg.png" id="3"]
+[ext_resource type="PackedScene" path="res://scenes/battle/PlayerCore.tscn" id="4"]
+[ext_resource type="PackedScene" path="res://scenes/battle/SpellProjectile.tscn" id="5"]
+
+[node name="BattlePage" type="Node2D"]
+script = ExtResource("1")
+projectile_scene = ExtResource("5")
+
+[node name="GameManager" type="Node" parent="."]
+script = ExtResource("2")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(640, 360)
+texture = ExtResource("3")
+scale = Vector2(0.667, 0.667)
+
+[node name="EntityLayer" type="Node2D" parent="."]
+
+[node name="PlayerCore" parent="EntityLayer" instance=ExtResource("4")]
+position = Vector2(260, 380)
+
+[node name="Enemies" type="Node2D" parent="EntityLayer"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="HUD" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="SentenceLabel" type="Label" parent="CanvasLayer/HUD"]
+offset_left = 420.0
+offset_top = 620.0
+offset_right = 860.0
+offset_bottom = 670.0
+theme_override_font_sizes/font_size = 32
+text = ""
+
+[node name="InfoLabel" type="Label" parent="CanvasLayer/HUD"]
+offset_left = 24.0
+offset_top = 24.0
+offset_right = 600.0
+offset_bottom = 70.0
+theme_override_font_sizes/font_size = 22
+text = ""
