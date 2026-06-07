@@ -1,37 +1,42 @@
-# LOGOS p5.js Prototype v0.3 Visual Prototype
+# LOGOS p5.js Prototype v0.4 First Battle
 
-This version improves the visual presentation of the LOGOS browser prototype.
+This version turns the prototype into a short playable battle.
 
 ## Features
 
-- Better HUD
-- Spell sentence panel
-- HP / Lingua / Flow display
-- Enemy visual design
-- Projectile VFX
-- Particle effects
-- Floating spell names
-- Keyboard spell input
-- GitHub Pages ready
+- Title screen
+- 3-step tutorial
+- Player movement with WASD
+- Enemy attacks
+- Enemy chanting UI
+- First battle against Ashlings
+- Boss: Speaker of Flame
+- Victory screen
+- Game over screen
+- Fire-language library scene
+- Spell buffer, auto cast, HP, Lingua, Flow
 
 ## Controls
 
-- 1 = FIRE
-- 2 = WATER
-- 3 = WIND
-- 4 = EARTH
-- 5 = LIGHT
+- SPACE = start / continue tutorial
+- WASD = move
+- 1 = FIRE / Ignis
+- 2 = WATER / Aqua
+- 3 = WIND / Ventus
+- 4 = EARTH / Terra
+- 5 = LIGHT / Lux
 - Q = SHOT
 - W = BEAM
 - E = WALL
+- R = retry after victory or game over
 
 ## Example Spells
 
-- FIRE
-- FIRE + SHOT
-- FIRE + WIND
-- FIRE + FIRE + SHOT
-- WATER + SHOT
-- WIND + SHOT
-- LIGHT + BEAM
-- EARTH + WALL
+- 1 = Spark
+- 1 + Q = Fireball
+- 1 + 3 = Ignis Ventus
+- 1 + 1 + Q = Twin Flame Shot
+- 2 + Q = Aqua Shot
+- 3 + Q = Wind Dart
+- 5 + W = Lux Beam
+- 4 + E = Stone Wall
